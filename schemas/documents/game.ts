@@ -9,6 +9,11 @@ export default {
       type: "string",
     },
     {
+      name: "host",
+      title: "Host",
+      type: "string",
+    },
+    {
       name: "players",
       title: "Players",
       type: "array",
