@@ -1,17 +1,20 @@
-import {createConfig} from 'sanity'
-import {deskTool} from 'sanity/desk'
-import {schemaTypes} from './schemas'
+import { createConfig, isDev } from "sanity";
+import { schemaTypes } from "./schemas";
+import { deskTool } from "sanity/desk";
+import { visionTool } from "@sanity/vision";
+
+const devOnlyPlugins = [visionTool()];
 
 export default createConfig({
-  name: 'default',
-  title: 'castle',
+  name: "default",
+  title: "castle",
 
-  projectId: 'ay6hp67o',
-  dataset: 'production',
+  projectId: "ay6hp67o",
+  dataset: "production",
 
-  plugins: [deskTool()],
+  plugins: [deskTool(), ...(isDev ? devOnlyPlugins : [])],
 
   schema: {
     types: schemaTypes,
   },
-})
+});
