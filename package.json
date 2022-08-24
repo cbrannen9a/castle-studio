@@ -8,8 +8,8 @@
     "dev": "yarn start",
     "start": "sanity start",
     "build": "sanity build",
-    "deploy": "sanity deploy",
-    "deploy-graphql": "sanity graphql deploy"
+    "deploy": "SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN sanity deploy",
+    "deploy-graphql": "SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN sanity graphql deploy --playground --force"
   },
   "keywords": [
     "sanity"
