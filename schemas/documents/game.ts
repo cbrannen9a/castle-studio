@@ -19,5 +19,20 @@ export default {
       type: "array",
       of: [{ type: "string" }],
     },
+    {
+      name: "maxPlayers",
+      title: "Max Players",
+      type: "number",
+      initialValue: 8,
+    },
+    {
+      name: "status",
+      title: "Status",
+      type: "string",
+      options: {
+        list: ["pending", "inProgress", "error", "completed"],
+      },
+      initialValue: "pending",
+    },
   ],
 };
