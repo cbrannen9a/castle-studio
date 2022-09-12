@@ -33,8 +33,4 @@ export default {
       },
     },
   ],
-  initialValue: {
-    maxPlayers: 8,
-    status: "pending",
-  },
 };
