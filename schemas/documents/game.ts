@@ -23,7 +23,6 @@ export default {
       name: "maxPlayers",
       title: "Max Players",
       type: "number",
-      initialValue: 8,
     },
     {
       name: "status",
@@ -32,7 +31,10 @@ export default {
       options: {
         list: ["pending", "inProgress", "error", "completed"],
       },
-      initialValue: "pending",
     },
   ],
+  initialValue: {
+    maxPlayers: 8,
+    status: "pending",
+  },
 };
