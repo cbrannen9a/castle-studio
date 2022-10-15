@@ -1,3 +1,3 @@
-import { game } from "./documents";
+import { game, site } from "./documents";
 
-export const schemaTypes = [game];
+export const schemaTypes = [game, site];
