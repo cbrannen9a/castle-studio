@@ -32,5 +32,12 @@ export default {
         list: ["pending", "inProgress", "error", "completed"],
       },
     },
+    {
+      name: "theme",
+      title: "Theme",
+      type: "reference",
+      to: [{ type: "theme" }],
+      initialValue: { _ref: "1532d0dc-6403-434c-908b-8cbacde71c10" },
+    },
   ],
 };
