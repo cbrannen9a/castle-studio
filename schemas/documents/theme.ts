@@ -10,7 +10,7 @@ export default {
     },
     {
       name: "resources",
-      title: "Resources",
+      title: "Base Resources",
       type: "array",
       of: [
         {

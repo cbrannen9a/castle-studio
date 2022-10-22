@@ -1,3 +1,5 @@
+import { FaArrowUp } from "react-icons/fa";
+
 export default {
   name: "refinement",
   type: "object",
@@ -25,8 +27,9 @@ export default {
     },
     prepare({ result, quantity, amount }: { result: string; amount: string; quantity: string }) {
       return {
-        title: quantity,
+        title: `Quantity: ${quantity}`,
         subtitle: `${result} - ${amount}`,
+        media: <FaArrowUp />,
       };
     },
   },
