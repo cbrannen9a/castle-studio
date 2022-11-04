@@ -5,8 +5,7 @@
   "main": "package.json",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "yarn start",
-    "start": "sanity start",
+    "dev": "sanity dev",
     "build": "sanity build",
     "deploy": "SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN sanity deploy",
     "deploy-graphql": "SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN sanity graphql deploy --playground --force"
@@ -15,12 +14,12 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/vision": "^3.0.0-dev-preview.15",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
+    "@sanity/vision": "^3.0.0-rc",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
     "react-icons": "^4.6.0",
     "react-is": "^17.0.0",
-    "sanity": "dev-preview",
+    "sanity": "3.0.0-rc.0",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {

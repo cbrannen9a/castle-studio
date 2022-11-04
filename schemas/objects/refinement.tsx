@@ -1,6 +1,7 @@
 import { FaArrowUp } from "react-icons/fa";
+import { defineType } from "sanity";
 
-export default {
+export default defineType({
   name: "refinement",
   type: "object",
   title: "Refinement",
@@ -33,4 +34,4 @@ export default {
       };
     },
   },
-};
+});

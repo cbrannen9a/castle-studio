@@ -1,14 +1,16 @@
-export default {
+import { defineField, defineType } from "sanity";
+
+export default defineType({
   name: "attribute",
   type: "document",
   title: "Attribute",
   fields: [
-    {
+    defineField({
       name: "title",
       title: "Title",
       type: "string",
-    },
-    {
+    }),
+    defineField({
       name: "theme",
       title: "Theme",
       type: "reference",
@@ -16,6 +18,6 @@ export default {
       options: {
         collapsed: false,
       },
-    },
+    }),
   ],
-};
+});

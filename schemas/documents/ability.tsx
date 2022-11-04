@@ -1,14 +1,16 @@
-export default {
+import { defineField, defineType } from "sanity";
+
+export default defineType({
   name: "ability",
   type: "document",
   title: "Ability",
   fields: [
-    {
+    defineField({
       name: "title",
       title: "Title",
       type: "string",
-    },
-    {
+    }),
+    defineField({
       name: "attribute",
       title: "Attribute",
       type: "reference",
@@ -16,12 +18,12 @@ export default {
       options: {
         collapsed: false,
       },
-    },
-    {
+    }),
+    defineField({
       name: "value",
       title: "Value",
       type: "number",
-    },
+    }),
   ],
   preview: {
     select: {
@@ -37,4 +39,4 @@ export default {
       };
     },
   },
-};
+});

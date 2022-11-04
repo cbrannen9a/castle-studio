@@ -1,4 +1,6 @@
-export default {
+import { defineType } from "sanity"
+
+export default defineType({
   name: "asset",
   type: "object",
   title: "Asset",
@@ -30,4 +32,4 @@ export default {
       };
     },
   },
-};
+});

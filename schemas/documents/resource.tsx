@@ -1,31 +1,32 @@
 import { FaSquareFull, FaCoins, FaProductHunt, FaRegUser } from "react-icons/fa";
+import { defineField, defineType } from "sanity";
 
 const typeOptions = ["base", "product", "person", "currency"] as const;
 
-export default {
+export default defineType({
   name: "resource",
   type: "document",
   title: "Resource",
   fields: [
-    {
+    defineField({
       name: "title",
       title: "Title",
       type: "string",
-    },
-    {
+    }),
+    defineField({
       name: "theme",
       title: "Theme",
       type: "reference",
       to: [{ type: "theme" }],
-    },
-    {
+    }),
+    defineField({
       name: "type",
       title: "Type",
       type: "string",
       options: { list: typeOptions },
       initialValue: "base",
-    },
-    {
+    }),
+    defineField({
       name: "abilities",
       title: "Abilities",
       type: "array",
@@ -34,11 +35,11 @@ export default {
           type: "ability",
         },
       ],
-      hidden: ({ parent }) => {
+      hidden: ({ parent }: { parent: { type?: TypeOpts } }) => {
         return parent?.type !== "person";
       },
-    },
-    {
+    }),
+    defineField({
       name: "combinations",
       title: "Combinations",
       type: "array",
@@ -47,13 +48,13 @@ export default {
           type: "combination",
         },
       ],
-    },
-    {
+    }),
+    defineField({
       name: "refinements",
       title: "Refinements",
       type: "array",
       of: [{ type: "refinement" }],
-    },
+    }),
   ],
   preview: {
     select: {
@@ -69,7 +70,7 @@ export default {
       };
     },
   },
-};
+});
 
 type TypeOpts = typeof typeOptions[number];
 

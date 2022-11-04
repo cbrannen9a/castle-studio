@@ -1,4 +1,6 @@
-export default {
+import { defineType } from "sanity";
+
+export default defineType({
   name: "game",
   type: "document",
   title: "Game",
@@ -40,4 +42,4 @@ export default {
       initialValue: { _ref: "1532d0dc-6403-434c-908b-8cbacde71c10" },
     },
   ],
-};
+});

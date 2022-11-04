@@ -1,12 +1,12 @@
-import { createConfig, isDev } from "sanity";
+import { defineConfig, isDev } from "sanity";
 import { schemaTypes } from "./schemas";
 import { deskTool } from "sanity/desk";
-import { visionTool } from "@sanity/vision";
+// import { visionTool } from "@sanity/vision";
 import structure from "./structure";
 
-const devOnlyPlugins = [visionTool()];
+const devOnlyPlugins = [];
 
-export default createConfig({
+export default defineConfig({
   name: "default",
   title: "castle",
 

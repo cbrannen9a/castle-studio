@@ -1,6 +1,7 @@
 import { FaPlus } from "react-icons/fa";
+import { defineType } from "sanity";
 
-export default {
+export default defineType({
   name: "combination",
   type: "object",
   title: "Combination",
@@ -85,4 +86,4 @@ export default {
       };
     },
   },
-};
+});
